@@ -233,7 +233,7 @@ public class KafkaSourceTaskTest {
         .andReturn(consumer);
     consumer.assign(topicPartitions);
     EasyMock.expectLastCall();
-    consumer.seek(firstTopicPartition, FIRST_OFFSET);
+    consumer.seek(firstTopicPartition, FIRST_OFFSET + 1);
     EasyMock.expectLastCall();
     replayAll();
 
@@ -268,7 +268,7 @@ public class KafkaSourceTaskTest {
     EasyMock.expectLastCall();
     consumer.seek(firstTopicPartition, FIRST_OFFSET);
     EasyMock.expectLastCall();
-    consumer.seek(secondTopicPartition, SECOND_OFFSET);
+    consumer.seek(secondTopicPartition, SECOND_OFFSET +1);
     EasyMock.expectLastCall();
 
     replayAll();
