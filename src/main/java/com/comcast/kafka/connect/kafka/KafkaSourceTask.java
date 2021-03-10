@@ -98,7 +98,7 @@ public class KafkaSourceTask extends SourceTask {
       String topicPartitionString = leaderTopicPartition.toTopicPartitionString();
       TopicPartition topicPartition = leaderTopicPartition.toTopicPartition();
       if (topicPartitionStringsOffsets.containsKey(topicPartitionString)) {
-        topicPartitionOffsets.put(topicPartition, topicPartitionStringsOffsets.get(topicPartitionString));
+        topicPartitionOffsets.put(topicPartition, topicPartitionStringsOffsets.get(topicPartitionString) + 1);
       } else {
         // No stored offset? No worries, we will place it it the list to lookup
         topicPartitionsWithUnknownOffset.add(topicPartition);
