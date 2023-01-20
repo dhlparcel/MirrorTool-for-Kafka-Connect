@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: MirrorTool-for-Kafka-Connect
+  description: MirrorTool-for-Kafka-Connect
+  annotations: 
+    github.com/project-slug: dhlparcel/MirrorTool-for-Kafka-Connect
+    
+spec:
+  type: component
+  lifecycle: production
+  owner: admins
